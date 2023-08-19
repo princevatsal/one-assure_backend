@@ -1,7 +1,6 @@
 from pymongo import MongoClient
-import certifi
 import os
-client = MongoClient(os.getenv("MONGO_DB_URI"),tlsCAFile=certifi.where())
+client = MongoClient(os.getenv("MONGO_DB_URI"))
 db = client["Insurance"]
 collection = db["Data"]
 
